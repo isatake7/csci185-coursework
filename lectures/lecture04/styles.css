@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+    margin: 0;
+}
+h1 {
+    font-size: 50px;
+}
+
+header {
+    background-color: #FFD400;
+    padding: 30px;
+}
+
+main {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+main section {
+    display: inline-block;
+    background-color: #F0F0F0;
+    margin: 5px;
+
+}
+
+section p {
+    padding: 20px;
+}
+
+section {
+    margin: 0px;
+}
