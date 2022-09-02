@@ -1,4 +1,5 @@
-/* You're welcome to change any of this! */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -6,10 +7,19 @@
 body {
     margin: 0px;
     font-family: Arial, sans-serif;
+    display: table;
+    margin: auto;
 }
 header, section {
     padding: 20px;
 }
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+
 p, li {
     line-height: 1.5em;
 }
