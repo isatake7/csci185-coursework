@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,7 +7,7 @@
 
 body {
     margin: 0px;
-    font-family: Arial, sans-serif;
+    font-family: 'Oswald', sans-serif;
     display: table;
     margin: auto;
 }
@@ -24,8 +25,21 @@ p, li {
     line-height: 1.5em;
 }
 
+#tutorials {
+    background-color: aliceblue;
+}
+
+#homework {
+    background-color: lightseagreen;
+}
+
 #inspiration {
     background-color: #F0F0F0;
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
+#coursework {
+    background-color: darkgray;
+}
+
