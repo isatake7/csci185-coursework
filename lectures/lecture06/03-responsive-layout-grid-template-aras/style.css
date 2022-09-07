@@ -32,26 +32,48 @@ body {
 
 /* Task 3 */
 
-.task-3.container {
+.container {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 10% 10% 70% 10%;
+  row-gap: 10px;
+  column-gap: 10px;
+  border: solid 1px black;
+  min-height: 100vh;
 }
 
-.task-3 .header {
+.header {
+  grid-row-start: 1;
+  grid-row-end: 2; /*optional if only spans 1 row */
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: grey;
 }
 
-.task-3 .navigation {
+.navigation {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  background-color: grey;
 }
 
-.task-3 .ads {
+.main {
+  grid-row-start: 3;
+  grid-column-start: 2;
+  background-color: grey;
 }
 
-.task-3 .sidebar {
+.sidebar{
+  grid-row-start: 2;
+  grid-row-end: span 2;
+  grid-column-start: 1;
+  background-color: grey;
 }
 
-.task-3 .main {
+.ads {
+  grid-row-start: 2;
+  grid-row-end: span 2;
 }
 
-.task-3 .footer {
-}
 
 
 
