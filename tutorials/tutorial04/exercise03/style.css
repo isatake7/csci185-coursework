@@ -1,4 +1,4 @@
-html {
+  html {
     scroll-behavior: smooth;
 }
 
@@ -12,3 +12,61 @@ body {
 }
 
 /* create additional rules below:  */
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/*h2 {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+#home {
+    background-color: blue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#bio {
+    background-color: green;
+    height: 100vh;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#portfolio {
+    background-color: lightblue;
+    height: 100vh;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact {
+    background-color: lightgreen;
+    height: 100vh;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
