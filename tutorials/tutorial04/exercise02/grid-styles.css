@@ -2,11 +2,54 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: pink;
+    text-align: center;
 }
 
 .grid-container {
     height: 100vh;
-    /* you will add addition rules for the container here  */
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
 }
 
 /* create your child rules here:  */
+.item-1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    border: solid 5px black;
+    background-color: white;
+}
+
+.item-2 {
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-column-end: span 3;
+    border: solid 5px black;
+    background-color: white;
+}
+
+.item-3 {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    border: solid 5px black;
+    background-color: white;
+}
+
+.item-4 {
+    grid-row-start: 4;
+    grid-column-start: 3;
+    grid-column-end: span 3;
+    border: solid 5px black;
+    background-color: white;
+}
+
+.item-5 {
+    grid-row-start: 5;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    border: solid 5px black;
+    background-color: white;
+}
+
