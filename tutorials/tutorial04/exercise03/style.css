@@ -17,21 +17,6 @@ main {
     flex-direction: column;
 }
 
-/*h2 {
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-p {
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-} */
-
-
 #home {
     background-color: blue;
     height: 100vh;
