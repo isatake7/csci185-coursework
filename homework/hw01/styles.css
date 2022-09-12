@@ -13,7 +13,7 @@ body {
     margin: 0;
 }
 
-nav li{
+nav li {
     display: inline;
     float: right;
     margin: 10px;
@@ -26,35 +26,118 @@ nav a:link {
 
 header {
     background: #008081;
-    text-align: center;
-    margin-top: -1px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
+    width: 100%;
 }
 
-#profile-pic {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    max-width: 150px;
+header h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
 h2 {
     font-family: 'Roboto Condensed', sans-serif;
+}
 
+#profile-pic {
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    margin-left: 35vw;
+    margin-left: 35vw;
 }
 
 #about {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
 }
 
 #projects {
     background-color: #F4F4F4;
+    display: grid;
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+#projects h2 {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.project-holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 30px;
+    margin-left: 15vw;
+    margin-right: 15vw;
 }
 
 #contact {
-    background-color: white;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
+
+.contact-details {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 40px;
+}
+
+#contact-info .row {
+    display: grid;
+    grid-template-columns: 40px auto;
+    margin-bottom: 15px; 
+}
+
+.row p {
+    margin: 0;
+}
+
+form .row1 {
+    display: grid;
+    grid-template-columns: 40% auto;
+    column-gap: 15px;
+}
+
+form .row {
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    background: rgb(235, 233, 233);
+    border: none;
+    border-radius: 5px;
+}
+
+#submit {
+    background: teal;
+    color: white;
+}
+
+#message {
+    width: 100%;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    background: #F4F4F4;
+    padding: 4vh;
+}
+
+
 
 
