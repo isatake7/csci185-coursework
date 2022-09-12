@@ -44,12 +44,11 @@ h2 {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-#profile-pic {
-    display: flex;
+header #profile-pic {
+    display: block;
     border-radius: 50%;
-    justify-content: center;
-    margin-left: 35vw;
-    margin-left: 35vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #about {
