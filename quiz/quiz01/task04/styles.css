@@ -4,8 +4,42 @@ body {
 
 main {
     height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 section {
     border: solid 4px orangered;
+    margin: 10px;
+}
+
+#s1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+
+#s2 {
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    grid-column-start: 3;
+    grid-column-end: span 2;
+}
+
+#s3 {
+    grid-row-start: 2;
+    grid-row-end: span 2;
+    grid-column-start: 1;
+}
+
+#s4 {
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+#s5 {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-column-end: span 2;
 }
