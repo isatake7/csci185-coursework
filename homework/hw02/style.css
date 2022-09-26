@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300&family=Poppins&display=swap');
+
 body {
-    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #fff;
 }
 a, a:hover, a:visited, a:active { 
@@ -116,8 +118,42 @@ footer {
 /* Part B: Header & Nav Styling */
 /********************************/
 
-/* Your Code Here */
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
 
+#profile {
+    grid-column-start: 10;
+    padding: 10px;
+    border: 2px solid #222222;
+    border-radius: 25px;
+    background-color: #222222;
+
+}
+
+
+#upgrade {
+    grid-column-start: 9;
+    grid-column-end: span 1;
+    margin-right: 5px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 25px;
+
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: small;
+}
 
 
 
@@ -126,9 +162,38 @@ footer {
 /* Part C: Artists Panel */
 /*************************/
 
-/* Your Code Here.
-   For the desktop view, there should be 5 cards per row.
-*/
+ #featured-content {
+    display: flexbox;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.artist-card {
+    border: 2px solid #222222;
+    border-radius: 25px;
+    background-color: #222222;
+    margin: 20px;
+    padding: 15px;
+    align-items: center;
+}
+
+.artist-card img {
+    border-radius: 50%;
+    max-width: 175px;
+    margin: 5px;
+    margin-bottom: 1px;
+}
+
+.card-footer {
+    margin-left: 15px;
+    margin-top: 1px;
+    font-size: 12px;
+}
+
+.artist-card p {
+    color: lightgray;
+    font-size: 12pt;
+}
 
 
 
