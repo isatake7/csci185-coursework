@@ -7,27 +7,20 @@ function setup() {
     // POINTS //
     ////////////
     // https://p5js.org/reference/#/p5/point
-    strokeWeight(50);
-    fill('red'); //fll is to fill in shape
-    stroke('red'); //stroke is the color of the outline
+    strokeWeight(10);
     point(110, 20);
-    point(118, 18);
-
-    circle(550, 100, 100);
-
-    
-    // point(120, 40);
-    // point(130, 20);
-    // point(140, 40);
-    // point(150, 20);
-    // point(160, 40);
-    // point(170, 20);
+    point(120, 40);
+    point(130, 20);
+    point(140, 40);
+    point(150, 20);
+    point(160, 40);
+    point(170, 20);
 
     //////////
     // TEXT //
     //////////
     // https://p5js.org/reference/#/p5/text
-    // text("Here is some text", 200, 40);
+    text("Here is some text", 200, 40);
 
     textSize(22);
     textFont('Helvetica');
@@ -35,10 +28,10 @@ function setup() {
     fill('teal');
     text("Here is some more text", 400, 40);
 
-    // /////////////
-    // // CIRCLES //
-    // /////////////
-    // // https://p5js.org/reference/#/p5/circle
+    /////////////
+    // CIRCLES //
+    /////////////
+    // https://p5js.org/reference/#/p5/circle
     fill('red');
     circle(550, 100, 100);
     fill('red');
@@ -57,10 +50,10 @@ function setup() {
     strokeWeight(1);
     stroke('black');
 
-    // //////////////
-    // // POLYGONS //
-    // //////////////
-    // // https://p5js.org/reference/#/p5/beginShape
+    //////////////
+    // POLYGONS //
+    //////////////
+    // https://p5js.org/reference/#/p5/beginShape
     // first poly:
     strokeWeight(5);
     stroke('teal');
