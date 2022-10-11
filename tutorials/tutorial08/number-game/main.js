@@ -1,5 +1,5 @@
 // code that picks a random number between 1 and 100:
-const secret = Math.floor(Math.random() * 99) + 1;
+let secret = Math.floor(Math.random() * 99) + 1;
 document.querySelector('#secret').innerHTML = secret;
 
 
@@ -39,11 +39,14 @@ function check() {
             document.querySelector('#celebrate').className = '';
         }
     } else {
-        document.querySelector('#num-guesses').innerHTML = "You have exceeded 5 tries";
+        document.querySelector('#num-guesses').innerHTML = "You have exceeded 5 tries. You lose starting over!";
         document.querySelector('#message').innerHTML = "";
+        let secret = Math.floor(Math.random() * 99) + 1;
+        document.querySelector('#secret').innerHTML = secret;
+        attempts = 0;
 
-        // check();
-        // return;
+ 
     }
+    document.querySelector('#num-guesses').innerHTML = "Attempts (Max 5): " + attempts;
 
 }
