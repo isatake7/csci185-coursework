@@ -10,7 +10,7 @@ function setup() {
     while (counter < 36) {
         if (counter % 3 == 0) {
             fill('hotpink');
-        } else if (counter % 2  == 0) {
+        } else if (counter % 3  == 1) {
             fill('teal');
         } else {
             fill('lightgreen');
