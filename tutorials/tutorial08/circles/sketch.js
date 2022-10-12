@@ -5,11 +5,21 @@ function setup() {
 
     // fill('red');
     noFill();
-    circle(100, 200, 50);
-    circle(100, 250, 50);
-    circle(100, 300, 50);
-    circle(100, 350, 50);
-    circle(100, 400, 50);
+    let counter = 0;
+
+    while (counter < 36) {
+        if (counter % 3 == 0) {
+            fill('hotpink');
+        } else if (counter % 2  == 0) {
+            fill('teal');
+        } else {
+            fill('lightgreen');
+        }
+
+        circle(400,  100 + counter*50, 10+counter*10);
+        counter += 1;
+
+    }
 
     drawGrid(canvasWidth, canvasHeight);
 }
