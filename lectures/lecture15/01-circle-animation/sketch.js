@@ -31,15 +31,12 @@ const ball = {
 function draw() {
     clear();
     
-
-    let i = 0;
-    while (i < circleData.length) {
+    for (let i = 0; i < circleData.length; i++) {
         fill(circleData[i].color);
         const ball = circleData[i];
         circle(ball.x, ball.y, ball.d);
         ball.x += ball.speedX;
         ball.y += ball.speedY;
-        i++;
     }
 
     drawGrid(canvasWidth, canvasHeight);
