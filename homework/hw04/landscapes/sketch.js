@@ -14,11 +14,22 @@ async function setup() {
     
     // draws 4 stars: 
     strokeWeight(0);
-    fill('white');
-    circle(50, 80, 2.5);
-    circle(50, 400, 1.5);
-    circle(600, 287, 3);
-    circle(400, 143, 1.5);
+    fill('white');  
+
+    let randomX = Math.random() * 500;
+    let randomY = Math.random() * 400;
+    let randomSize = Math.random()* 10
+
+    let i = 0;
+    while (i < 1000) {
+        drawStars();
+        i++;
+    }
+
+    // circle(50, 80, 2.5);
+    // circle(50, 400, 1.5);
+    // circle(600, 287, 3);
+    // circle(400, 143, 1.5);
 }
 
 function drawStars() {
