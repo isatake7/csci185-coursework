@@ -40,11 +40,11 @@ function draw() {
     }
         
 
-    c2.x += c2.speed;
+    c2.x -= c2.speed;
 
     drawCar(c2.x, c2.y, c2.width, c2.color);
-    if (c2.x > canvasWidth) {
-        c2.x = -200;
+    if (c2.x < 0) {
+        c2.x = canvasWidth + 200;
     }
     
     // draw the grid (optional -- feel free to remove this line):
