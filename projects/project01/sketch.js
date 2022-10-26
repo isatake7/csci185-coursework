@@ -110,7 +110,7 @@ function drawCreature (centerX, centerY, size, primaryColor, secondaryColor) {
     circle(centerX, centerY, size);
     fill(primaryColor);
     circle(centerX, centerY-(.75*size), size/1.5);
-    stroke('black');
+    stroke('white');
     strokeWeight(3.5);
     line(centerX, ((centerY-(.75*size))-.5*(size/1.5)), centerX, ((centerY-(.75*size))-.5*(size/1.5)) - (size*.25));
     fill(secondaryColor);
@@ -141,19 +141,14 @@ function drawCar(x, y, size, fillColor, wheelColor='black') {
 }
 
 function drawLandscapeObject (x, y, size) {
-    // strokeWeight(1);
-    // stroke('black');
-    // noFill()
-    // for (let i = 0; i < 25; i++) {
-    //     const randoX = Math.random() * canvasWidth;
-    //     const randoY = Math.random() * canvasHeight;
-    //     const randoWidth = Math.random() * 40 + 5;
-    //     circle(randoX, randoY, randoWidth);
-    //     drawCreature(randoX, randoY, randoWidth + 100, 'black', 'red');
-
-    // }
     background('black');
-    ellipse(random(width), random(height), random(3, 6), random(3, 6))
-
+    fill('white');
+    circle(random(width), random(height), random(3, 15), random(3, 15));
+    fill('yellow');
+    ellipse(random(width), random(height), random(3, 10), random(3, 10));
+    fill('white');
+    circle(random(width), random(height), random(3, 15), random(3, 15));
+    fill('yellow');
+    ellipse(random(width), random(height), random(3, 10), random(3, 10));
 }
 

@@ -35,11 +35,17 @@ function draw() {
 
     // redraw the car:
     drawCar(c1.x, c1.y, c1.width, c1.color);
+    if (c1.x > canvasWidth) {
+        c1.x = -200;
+    }
         
 
     c2.x += c2.speed;
 
     drawCar(c2.x, c2.y, c2.width, c2.color);
+    if (c2.x > canvasWidth) {
+        c2.x = -200;
+    }
     
     // draw the grid (optional -- feel free to remove this line):
     drawGrid(canvasWidth, canvasHeight);
