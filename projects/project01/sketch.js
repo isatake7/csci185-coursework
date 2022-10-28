@@ -8,6 +8,7 @@ const canvasHeight = window.innerHeight;
 let currentX = 500;
 let currentY = 300;
 let isFollowing = false;
+const droidList = [];
 
 //controls position of car
 const c1 = {
@@ -34,30 +35,29 @@ const c3 = {
     color: 'green'
 };
 
+const ship1 = {
+    x: 200,
+    y: canvasHeight
+}
 
-//setup: draw the creature when the game first begins:
+const ship2 = {
+    x: canvasWidth - 200,
+    y: canvasHeight
+}
+
+
 function setup() {
     createCanvas(canvasWidth, canvasHeight);
 
-    // message
+    // set up creature
     drawCreature(currentX, currentY, 75, 'white', 'orange');
 }
 
-// let drones = [];
-// for (let i = 0; i < 10; i++) {
-//     drones.push({
-//         x: randX,
-//         y: randY,
-//         size: randSize
-//     });
-// }
-
 let counter = 0;
-function draw () {
+function draw() {
     clear();
     
-    drawLandscapeObject();
-
+    starsBackground();
 
     c1.x -= c1.speed;
     drawCar(c1.x, c1.y, c1.width, 'hotpink');
@@ -66,6 +66,7 @@ function draw () {
     }
 
     c2.x += c2.speed;
+    c2.y += Math.cos(counter / 30) * 3;
     drawCar(c2.x, c2.y, c2.width, 'blue');
     if (c2.x > canvasWidth) {
         c2.x = -100;
@@ -77,18 +78,52 @@ function draw () {
         c3.x = -200;
     }
 
-    drawCreature(currentX, currentY, 75, 'white', 'orange');
+    //move spaceship
+    ship1.y = ship1.y - 5;
+    drawLandscapeObject(ship1.x, ship1.y);
+        if (ship1.y < 0) {
+        ship1.y = canvasHeight + 300;
+     }
 
+    ship2.y = ship2.y - 3;
+    drawLandscapeObject(ship2.x, ship2.y);
+        if (ship2.y < 0) {
+        ship2.y = canvasHeight + 300;
+     }
+
+    drawCreature(currentX, currentY, 75, 'white', 'orange');
     counter++;
+
+    handleClick();
+
+    for (const droid of droidList) {
+        drawCreature(droid.x, droid.y, droid.size, 'orange' , 'white');
+    }
+
 }
 
-function mouseClicked() {
+function handleClick() {
     console.log('mouseClicked', isFollowing);
-    if (isFollowing == false) {
-        isFollowing = true;
-    } else {
-        isFollowing = false;
-    }
+
+
+    if (mouseIsPressed === true) {
+        if (mouseButton === LEFT) {
+            if (isFollowing == false) {
+                isFollowing = true;
+            } else {
+                isFollowing = false;
+            }
+        }
+        if (mouseButton === RIGHT) {
+            const droid = {
+                x: mouseX,
+                y: mouseY,
+                size: Math.random()* 40 + 3,
+            }
+            droidList.push(droid)
+        }
+      }
+
 }
 
 function mouseMoved() {
@@ -98,13 +133,10 @@ function mouseMoved() {
         console.log(currentX);
         currentX = mouseX;
         currentY = mouseY;
-        // clear();
-        // drawCreature(mouseX, mouseY, 75, 'black', 'red');
     }
 
 }
 
-//your draw creature function
 function drawCreature (centerX, centerY, size, primaryColor, secondaryColor) {
     fill(primaryColor);
     circle(centerX, centerY, size);
@@ -140,7 +172,30 @@ function drawCar(x, y, size, fillColor, wheelColor='black') {
     circle(x + size / 4, y, size / 6);
 }
 
-function drawLandscapeObject (x, y, size) {
+function drawLandscapeObject(centerX, centerY) {
+    fill('gray');
+    rect(centerX,centerY,40,120);
+    rect(centerX+5,centerY-10,30,10);
+    rect(centerX+12,centerY-20,15,15);
+    rect(centerX+17,centerY-40,5,30);
+    rect(centerX-20,centerY+80,34,34);
+    rect(centerX+25,centerY+80,34,34);
+    rect(centerX-13,centerY+70,20,20);
+    rect(centerX+31,centerY+70,20,20);
+    noStroke();
+    fill('blue'); 
+    circle(centerX+20,centerY+10,10);
+    circle(centerX+20,centerY+30,10,10);
+    circle(centerX+20,centerY+50,10,10);
+    fill(204, 102, 0);
+    rect(centerX,centerY+120,40,10);
+    rect(centerX+5,centerY+130,30,10);
+    rect(centerX+10,centerY+140,20,10);
+    rect(centerX+15,centerY+150,10,10);
+}
+
+
+function starsBackground () {
     background('black');
     fill('white');
     circle(random(width), random(height), random(3, 15), random(3, 15));
@@ -150,5 +205,9 @@ function drawLandscapeObject (x, y, size) {
     circle(random(width), random(height), random(3, 15), random(3, 15));
     fill('yellow');
     ellipse(random(width), random(height), random(3, 10), random(3, 10));
+}
+
+document.oncontextmenu = function () {
+    return false;
 }
 
