@@ -21,3 +21,15 @@ const photos = [
 // that draws all of the pictures to the screen 
 // where the is_favorite property is set to true. 
 // 8 photos should be displayed.
+
+function displayResults() {
+    for (let i = 0; i < photos.length; i++) {
+        if (photos[i].is_favorite == true) {
+            const html = `<img src=${photos[i].image_url}>`
+            document.querySelector(".images").innerHTML += html;
+            console.log(html);
+        }
+    }
+}
+
+displayResults();
