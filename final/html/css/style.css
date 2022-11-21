@@ -251,8 +251,8 @@ img.padding_right_10 {
     display: flex;
 }
 .logo {
-    width: 33%;
-    float: left;
+    width: 10%;
+    float: center;
 }
 .menu_text {
     width: 10%;
