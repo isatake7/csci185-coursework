@@ -1,0 +1,8 @@
+.highlight {
+    color: #0c426e;
+}
+
+.choose_box:hover .highlight{
+    color: hotpink;
+}
+
